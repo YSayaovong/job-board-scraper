@@ -1,17 +1,51 @@
-# Job Scraper Tool
+# Job Board Scraper
 
-The Job Scraper Tool automates the process of searching and extracting remote job listings from various websites. With this tool, users can specify job titles, filter by location, and scrape job details like titles and links, which are useful for job seekers looking for remote opportunities.
+A Python-based web scraping tool that extracts job postings from online job boards and outputs structured data for further analysis. This project is designed to support job market research, trend analysis, and career planning by automating the collection of job listing data.
 
-## Features
-- **Job Title Search** – Specify multiple job titles for scraping.
-- **Location Filtering** – Filters for "Work from Anywhere" (WFA) or REMOTE.
-- **Duplicate Detection** – Avoids duplicate listings.
-- **Automated Scraping** – Gathers titles and job links.
-- **Easy Integration** – Built in Python with Selenium.
+---
 
-## Usage
-1. Set up ChromeDriver on your system and update the path in the code.
-2. Add your job titles inside the `job_titles` list in `config.py`.
-3. Run the scraper:
+## 🔍 Project Overview
+
+This scraper collects key job posting data including:
+- Job title  
+- Company name  
+- Location  
+- Posting date  
+- Job link or ID  
+
+The script is flexible and can be adapted to different job boards or filtered by specific roles, technologies, or locations.
+
+---
+
+## 🚀 Features
+
+- Extracts job data using `requests`, `BeautifulSoup`, or similar libraries
+- Outputs clean, structured data to CSV or JSON
+- Simple, readable script designed for modification or integration into ETL pipelines
+- Ideal starting point for job trend analytics or resume-targeting tools
+
+---
+
+## ⚙️ Tech Stack
+
+- **Language:** Python 3  
+- **Libraries:** `requests`, `BeautifulSoup`, `pandas`  
+- **Output Formats:** CSV, JSON
+
+---
+
+## 📁 Example Output
+
+| Title                  | Company        | Location     | Date Posted | Job Link |
+|------------------------|----------------|--------------|-------------|----------|
+| Data Engineer          | Acme Corp      | Atlanta, GA  | 2025-08-01  | [Link](#) |
+| Machine Learning Eng.  | Beta Tech Inc. | Remote       | 2025-08-02  | [Link](#) |
+
+---
+
+## 📦 How to Use
+
+1. Clone the repo:
    ```bash
-   python main.py
+   git clone https://github.com/YSayaovong/job-board-scraper.git
+   cd job-board-scraper
